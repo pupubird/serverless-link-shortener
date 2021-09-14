@@ -69,8 +69,20 @@ GET - `https://<your_url>/{name}`:
 POST - `https://<your_url>/`:
 
 - A post request with the following field:
-  - name: The name of the shorterned url
-  - url: The actual url that will be redirected to
+  - `name`: The name of the shorterned url
+  - `url`: The actual url that will be redirected to
+
+Example:
+
+```
+$> curl -d '{"name":"<your preferred short name>", "url": "<the actual url>"}' -X POST -H "Content-Type: application/json" <the api gateway url >
+```
+
+It should return your short name in response:
+
+```
+<your preferred short name>
+```
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
