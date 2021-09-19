@@ -9,12 +9,20 @@ module.exports = async (e) => {
     await links.register(url, name);
     return {
       statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true,
+      },
       body: name,
     };
   } catch (error) {
     console.log(error);
     return {
       statusCode: 400,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true,
+      },
       body: `Invalid name: ${name} was already registered`,
     };
   }
