@@ -33,7 +33,6 @@ functions:
       - http:
           path: /{link}
           method: get
-          cors: true
           caching:
             enabled: true
             cacheKeyParameters:

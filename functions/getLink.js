@@ -20,8 +20,6 @@ module.exports = async (e) => {
   return {
     statusCode: 301,
     headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Credentials": true,
       Location: existingLink["Items"][0]["url"],
     },
     body: existingLink["Items"][0]["url"],
