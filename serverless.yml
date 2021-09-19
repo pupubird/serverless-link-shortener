@@ -33,6 +33,7 @@ functions:
       - http:
           path: /{link}
           method: get
+          cors: true
           caching:
             enabled: true
             cacheKeyParameters:
@@ -42,6 +43,7 @@ functions:
     handler: handler.shortenLink
     events:
       - http:
+          cors: true
           path: /
           method: post
 
