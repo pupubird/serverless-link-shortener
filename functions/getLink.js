@@ -22,8 +22,6 @@ module.exports = async (e) => {
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Credentials": true,
-    },
-    headers: {
       Location: existingLink["Items"][0]["url"],
     },
     body: existingLink["Items"][0]["url"],
